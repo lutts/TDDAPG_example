@@ -1,0 +1,11 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>images/five-stars.gif</file>
+    <file>images/four-stars.gif</file>
+    <file>images/no-rating.gif</file>
+    <file>images/one-star.gif</file>
+    <file>images/three-stars.gif</file>
+    <file>images/two-stars.gif</file>
+    <file>images/zero-stars.gif</file>
+</qresource>
+</RCC>

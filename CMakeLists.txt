@@ -26,9 +26,22 @@ find_package(Qt5Widgets REQUIRED)
 
 # find_doxygen()
 
-add_subdirectory(src)
-add_subdirectory(test)
-add_subdirectory(gtest)
-add_subdirectory(qtest)
+#add_subdirectory(src)
+#add_subdirectory(test)
+#add_subdirectory(gtest)
+#add_subdirectory(qtest)
+
+set(SRCS QtMovieListEditorView.cpp QtMovieRating.cpp)
+
+set(qt_RESOURCES images.qrc)
+qt5_add_resources(qt_GEN_RCS ${qt_RESOURCES})
+
+add_library(nowplaying ${SRCS} ${qt_GEN_RCS})
+target_link_libraries(nowplaying Qt5::Widgets)
+
+add_executable(nowplay main.cpp)
+target_link_libraries(nowplay nowplaying)
+
+add_subdirectory(tests)
 
 ADD_CPPLINT_SUPPORT("")
